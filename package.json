@@ -4,7 +4,9 @@
   "description": "backend for reddit predictor",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "server":"nodemon index.js",
+    "start":"node index.js",
+    "test": "cross-env DB_ENV=testing jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
     "url": "https://github.com/BW-Post-Here-SubReddit-Predictor/Backend/issues"
   },
   "homepage": "https://github.com/BW-Post-Here-SubReddit-Predictor/Backend#readme",
+  "jest": {
+    "testEnviroment":"node"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
