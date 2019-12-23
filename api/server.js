@@ -4,7 +4,7 @@ const cors = require("cors");
 
 
 const authLogReg = require("../auth/auth-log-reg");
-const lists = require("../lists/lists-router");
+const posts = require("../posts/posts-router");
 const authenticate = require("../auth/auth-middleware");
 const users = require("../users/users-router");
 
@@ -15,7 +15,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api/auth", authLogReg);
-server.use("/api/lists", authenticate, lists);
+server.use("/api/posts", authenticate, posts);
 server.use("/api/users", authenticate, users);
 
 server.get("/", (req, res) => {
