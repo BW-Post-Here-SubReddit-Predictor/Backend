@@ -18,7 +18,7 @@ exports.up = function(knex) {
         tbl.increments();
         tbl.string('post_url', 450)
         .unique();
-        tbl.string('post_description', 450)
+        tbl.text('post_description')
         .notNullable();
         tbl
         .integer("user_id")

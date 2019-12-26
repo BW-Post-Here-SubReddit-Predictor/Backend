@@ -4,6 +4,7 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex('users').del()
     .then(function () {
+
       const cory = bcrypt.hashSync("cory", 12)
       const robert = bcrypt.hashSync("robert", 12)
       const eian = bcrypt.hashSync("eian", 12)
